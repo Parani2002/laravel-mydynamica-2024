@@ -7,7 +7,6 @@
 </head>
 <body>
     <table border="1">
-        
         <tr>
             <th>ID</th>
             <th>First Name</th>
