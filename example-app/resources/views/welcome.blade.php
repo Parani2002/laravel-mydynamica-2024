@@ -7,5 +7,10 @@
 </head>
 <body>
     <h1>Paranitharan</h1>
+    @foreach($greetings as $greeting)
+        <h1>{{$greeting}}</h1>
+    @endforeach
+
+    <h2>Hello Paranitharan</h2>
 </body>
 </html>

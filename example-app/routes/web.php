@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Employee; 
 
 Route::get('/', function () {
-    return view('welcome');
+    $greetings = ['Welcome','Have a nice day', 'great work'];
+    return view('welcome', compact('greetings'));
 });
 
 Route::get('/employees', function(){

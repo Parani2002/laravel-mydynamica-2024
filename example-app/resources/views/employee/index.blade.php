@@ -32,7 +32,8 @@
             <td>{{$employee -> designation}}</td>
             <td>{{$employee -> created_at }}</td>
             <td>{{$employee -> updated_at}}</td>
-            <td><a href="{{url('employee/' . $employee -> id)}}">show</a></td>
+            <td><a href="{{ url("employee/{$employee -> id}") }}">show</a></td>
+            {{-- <td><a href="{{ url("employee/" . $employee -> id) }}">show</a></td> --}}
         </tr>
             
         @endforeach
