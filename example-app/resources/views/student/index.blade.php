@@ -11,6 +11,7 @@
             <th>Student ID</th>
             <th>Firstname</th>
             <th>Last Name</th>
+            <th>Grade ID</th>
             <th>Created Date</th>
             <th>Updated Date</th>
             <th>Student Details</th>
@@ -20,6 +21,7 @@
             <td>{{$student -> id}}</td>
             <td>{{$student -> first_name}}</td>
             <td>{{$student -> last_name}}</td>
+            <td>{{$student -> grade -> grade_name}}</td>
             <td>{{$student -> created_at }}</td>
             <td>{{$student -> updated_at}}</td>
             <td><a href="{{url("student/" . $student -> id)}}">Show</a></td>
