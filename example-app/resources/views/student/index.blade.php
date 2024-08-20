@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +22,9 @@
             <td>{{$student -> id}}</td>
             <td>{{$student -> first_name}}</td>
             <td>{{$student -> last_name}}</td>
-            <td>{{$student -> grade -> grade_name}}</td>
+            {{-- <td>{{ $student-> grade }}</td> --}}
+            <td> {{ $student->grade ? $student ->grade ->  grade_name  : 'No Grade Assigned' }} </td>
+           
             <td>{{$student -> created_at }}</td>
             <td>{{$student -> updated_at}}</td>
             <td><a href="{{url("student/" . $student -> id)}}">Show</a></td>

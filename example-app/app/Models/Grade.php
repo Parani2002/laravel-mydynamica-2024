@@ -10,8 +10,8 @@ class Grade extends Model
 {
     use HasFactory;
    
-    public function students()
+    public function students():HasMany
     {
-        return $this->hasMany(Student::class);
+        return $this->hasMany(Student::class, 'grade_id');
     }
 }

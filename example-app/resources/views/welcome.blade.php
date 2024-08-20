@@ -7,5 +7,9 @@
 </head>
 <body>
     <h1>Paranitharan</h1>
+    @foreach($students as $student)
+        <p>{{$student -> grade_name}}</p>
+       
+    @endforeach
 </body>
 </html>

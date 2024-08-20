@@ -9,9 +9,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Student extends Model
 {
     use HasFactory;
-    public function grade()
+    public function grade():BelongsTo
     {
-        return $this->belongsTo(Grade::class);
+        return $this->belongsTo(Grade::class, 'grade_id');
     }
+
+
    
 }

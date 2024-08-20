@@ -2,13 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Student; 
+use App\Models\Grade;
 
 Route::get('/', function () {
-    return view('welcome');
+    $grade = Grade::find(1);
+    $students = $grade -> students();
+    return view('welcome', ['students' => $students]);
 });
 
 Route::get('/students', function () {
-    $students = Student::all();
+    // $students = Student::all();
+    $students = Student::with('grade')->get();
+   
+
     return view('student.index', compact('students'));
 });
 Route::get('/student/{id}', function ($id) {
