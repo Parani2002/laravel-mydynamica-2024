@@ -35,6 +35,10 @@
             <td>{{$employee -> gender}}</td>
         </tr>
         <tr>
+            <th>Designation ID</th>
+            <td>{{$employee -> designation_id}}</td>
+        </tr>
+        <tr>
             <th>Designation</th>
             <td>{{$employee -> designation}}</td>
         </tr>
