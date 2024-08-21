@@ -11,13 +11,16 @@ Route::get('/', function () {
 });
 
 Route::get('/students', function () {
-    // $students = Student::all();
-    $students = Student::with('grade')->get();
-   
-
+    $students = Student::all();
+    // $students = Student::with('grade')->get();
     return view('student.index', compact('students'));
 });
 Route::get('/student/{id}', function ($id) {
     $student = Student::find($id);
     return view('student.show', ['student' => $student]);
+});
+Route::get('/grade/{id}', function ($id) {
+    $students = Grade::find($id) -> students;
+    $subjects = Grade::find($id) -> subjects;
+    return view('grade.index', compact('students','subjects'));
 });

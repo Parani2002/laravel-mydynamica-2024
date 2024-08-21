@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <td><a href="{{url('students')}}">Student List</a></td>
+    <h1><a href="{{url('students')}}">Student List</a></h1>
     
-    <table>
+    <table border="2">
         <tr>
             <th>First Name</th>
             <td>{{$student -> first_name}}</td>
@@ -17,6 +17,22 @@
             <th>Last Name</th>
             <td>{{$student -> last_name}}</td>
         </tr>
+        <tr>
+            <th>Grade ID</th>
+            <td>{{$student -> grade_id}}</td>
+        </tr>
+        <tr>
+            <th>Subjects</th>
+            <td>
+                @foreach ($student -> subjects  as $subject)
+                    {{$subject -> subject_name}}
+                @endforeach
+            </td>
+           
+        </tr>
+        
+      
+
     </table>
 </body>
 </html>

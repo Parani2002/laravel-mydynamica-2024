@@ -10,9 +10,9 @@
     <table border="2">
         <tr>
             <th>Student ID</th>
-            <th>Firstname</th>
+            <th>First Name</th>
             <th>Last Name</th>
-            <th>Grade ID</th>
+            <th>Grade Name</th>
             <th>Created Date</th>
             <th>Updated Date</th>
             <th>Student Details</th>
@@ -22,8 +22,8 @@
             <td>{{$student -> id}}</td>
             <td>{{$student -> first_name}}</td>
             <td>{{$student -> last_name}}</td>
-            {{-- <td>{{ $student-> grade }}</td> --}}
-            <td> {{ $student->grade ? $student ->grade ->  grade_name  : 'No Grade Assigned' }} </td>
+           <td><a href="{{url('grade/'. $student -> grade_id)}}">{{$student -> grade -> grade_name}}</a></td>
+            {{-- <td> {{ $student->grade ? $student ->grade ->  grade_name  : 'No Grade Assigned' }} </td> --}}
            
             <td>{{$student -> created_at }}</td>
             <td>{{$student -> updated_at}}</td>
