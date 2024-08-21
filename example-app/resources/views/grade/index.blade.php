@@ -31,7 +31,7 @@
             <th>Common Subjects</th> 
             <td>    
             @foreach ($subjects as $subject)
-            {{$subject -> subject_name}}
+                {{$subject -> subject_name}}
             @endforeach
              </td>
 
