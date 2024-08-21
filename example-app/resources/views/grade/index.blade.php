@@ -7,38 +7,27 @@
     
 </head>
 <body>
-    <h1>Student List on the Same Grade</h1>
+    <h1>Grade Details</h1>
+    <h2><a href="{{url('students')}}">Student List</a></h2>
     <table border="2">
-        <th>First Name</th>
-        <th>Last Name</th>
         <th>Grade ID</th>
-        <th>Created Date</th>
-        <th>Updated Date</th>
-        @foreach ($students as $student)
+        <th>Grade Name</th>
+        <th>Grade Order</th>
+        <th>Grade Colour</th>
+        <th>Grade Order</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+        @foreach ($grades as $grade)
         <tr>
-            <td>{{$student -> first_name}}</td>
-            <td>{{$student -> last_name}}</td>
-            <td>{{$student -> grade_id}}</td>
-            <td>{{$student -> created_at}}</td>
-            <td>{{$student -> updated_at}}</td>
+            <td><a href="{{url('grade/'. $grade -> id)}}">{{$grade -> id}}</a></td>
+            <td>{{$grade -> grade_name}}</td>
+            <td>{{$grade -> grade_order}}</td>
+            <td>{{$grade -> grade_colour}}</td>
+            <td>{{$grade -> grade_order}}</td>
+            <td>{{$grade -> created_at}}</td>
+            <td>{{$grade -> updated_at}}</td>
         </tr>
         @endforeach
-   
-    </table>
-    <br>
-    <table border="2">
-        <tr> 
-            <th>Common Subjects</th> 
-            <td>    
-            @foreach ($subjects as $subject)
-                {{$subject -> subject_name}}
-            @endforeach
-             </td>
 
-        </tr>
-    
-        
-      
-    </table>
 </body>
 </html>

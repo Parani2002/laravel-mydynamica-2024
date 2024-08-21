@@ -3,24 +3,42 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Student; 
 use App\Models\Grade;
+use App\Models\Subject;
 
 Route::get('/', function () {
-    $grade = Grade::find(1);
-    $students = $grade -> students();
-    return view('welcome', ['students' => $students]);
+    return view('welcome');
 });
 
 Route::get('/students', function () {
     $students = Student::all();
-    // $students = Student::with('grade')->get();
+    // $students = Student::with('subjects') -> get();
     return view('student.index', compact('students'));
 });
+
 Route::get('/student/{id}', function ($id) {
     $student = Student::find($id);
     return view('student.show', ['student' => $student]);
 });
+
+
+
+Route::get('/grades', function () {
+    $grades = Grade::all();
+    return view('grade.index', compact('grades'));
+});
 Route::get('/grade/{id}', function ($id) {
     $students = Grade::find($id) -> students;
     $subjects = Grade::find($id) -> subjects;
-    return view('grade.index', compact('students','subjects'));
+    return view('grade.show', compact('students','subjects'));
 });
+
+Route::get('/subjects', function () {
+    $subjects = Subject::all();
+    return view('subject.index', compact('subjects'));
+});
+
+Route::get('/subject/{id}', function ($id) {
+    $students = Subject::find($id) -> students;
+    return view('subject.show', compact('students'));
+});
+
