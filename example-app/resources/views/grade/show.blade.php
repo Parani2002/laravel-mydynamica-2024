@@ -6,25 +6,24 @@
     <title>Grade Show</title>
     <style>
         table,td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  text-align: center;
-}
-th{
-    border: 2px solid black;
-}
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th{
+            border: 2px solid black;
+        }
         tr:nth-child(even) {
-  background-color: #D6EEEE;
-}
+            background-color: #D6EEEE;
+        }
 
-th, td {
-  padding: 15px;
-}
+        th, td {
+            padding: 15px;
+        }
     </style>
     
 </head>
 <body>
-    
     <h2><a href="{{url('students')}}">Student List</a></h2>
     <h1>Student List on the {{$grade -> grade_name}}</h1>
     <table border="2"  style="width:100%">
@@ -44,7 +43,6 @@ th, td {
             <td>{{$student -> updated_at}}</td>
         </tr>
         @endforeach
-   
     </table>
     <br>
 

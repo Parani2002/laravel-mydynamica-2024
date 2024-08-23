@@ -7,23 +7,22 @@
     <title>Students</title>
     <style>
         table,td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  text-align: center;
-}
-th{
-    border: 2px solid black;
-}
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th{
+            border: 2px solid black;
+        }
         tr:nth-child(even) {
-  background-color: #D6EEEE;
-}
-th:nth-child(even),td:nth-child(even) {
-  background-color: rgba(150, 212, 212, 0.4);
-}
-
-th, td {
-  padding: 15px;
-}
+            background-color: #D6EEEE;
+        }
+        th:nth-child(even),td:nth-child(even) {
+            background-color: rgba(150, 212, 212, 0.4);
+        }
+        th, td {
+            padding: 15px;
+        }
     </style>
 </head>
 <body>
