@@ -36,7 +36,7 @@ th, td {
         <th>Updated At</th>
         @foreach ($grades as $grade)
         <tr>
-            <td><a href="{{url('grade/'. $grade -> id)}}">{{$grade -> id}}</a></td>
+            <td><a href="{{url('grades/'. $grade -> id)}}">{{$grade -> id}}</a></td>
             <td>{{$grade -> grade_name}}</td>
             <td>{{$grade -> grade_order}}</td>
             <td>{{$grade -> grade_colour}}</td>

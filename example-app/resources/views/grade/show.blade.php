@@ -38,7 +38,7 @@
             <td><a href="{{url('student/'. $student -> id)}}">{{$student -> id}}</a></td>
             <td>{{$student -> first_name}}</td>
             <td>{{$student -> last_name}}</td>
-            <td><a href="{{url('grade/' . $student -> grade -> id)}}" >{{$student -> grade -> grade_name}}</a></td>
+            <td><a href="{{url('grades/' . $student -> grade -> id)}}" >{{$student -> grade -> grade_name}}</a></td>
             <td>{{$student -> created_at}}</td>
             <td>{{$student -> updated_at}}</td>
         </tr>
@@ -59,7 +59,7 @@
         </tr>  
         @foreach ($subjects as $subject)
             <tr>
-                <td><a href="{{url('subject/' . $subject -> id)}}">{{$subject -> id}}</a></td>
+                <td><a href="{{url('subjects/' . $subject -> id)}}">{{$subject -> id}}</a></td>
                 <td>{{$subject -> subject_name}}</td>
                 <td>{{$subject -> subject_order}}</td>
                 <td>{{$subject -> subject_colour}}</td>

@@ -6,8 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1><a href="{{url('students')}}">Student List</a></h1>
-    <h1><a href="{{url('grades')}}">Grade List</a></h1>
-    <h1><a href="{{url('subjects')}}">Subject List</a></h1>
+    <h1>Welcome</h1>
 </body>
 </html>
