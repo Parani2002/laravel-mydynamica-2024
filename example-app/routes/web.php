@@ -29,7 +29,8 @@ Route::get('/grades', function () {
 Route::get('/grade/{id}', function ($id) {
     $students = Grade::find($id) -> students;
     $subjects = Grade::find($id) -> subjects;
-    return view('grade.show', compact('students','subjects'));
+    $grade = Grade::find($id);
+    return view('grade.show', compact('students','subjects','grade'));
 });
 
 Route::get('/subjects', function () {
@@ -39,6 +40,8 @@ Route::get('/subjects', function () {
 
 Route::get('/subject/{id}', function ($id) {
     $students = Subject::find($id) -> students;
-    return view('subject.show', compact('students'));
+    $grades = Subject::find($id) -> grade;
+    $subject = Subject::find($id);
+    return view('subject.show', compact('students','grades','subject'));
 });
 

@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1><a href="{{url('students')}}">Student List</a></h1>
     <h1>Subject Details</h1>
     <table border="1">
         <tr>
