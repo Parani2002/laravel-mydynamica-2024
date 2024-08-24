@@ -36,7 +36,7 @@ th, td {
         </tr>
         @foreach ($subjects as $subject)
         <tr>
-            <td><a href="{{url('subject/'. $subject -> id)}}">{{$subject -> id}}</a></td>
+            <td><a href="{{url('subjects/'. $subject -> id)}}">{{$subject -> id}}</a></td>
             <td>{{$subject -> subject_name}}</td>
             <td>{{$subject -> subject_order}}</td>
             <td>{{$subject -> subject_colour}}</td>

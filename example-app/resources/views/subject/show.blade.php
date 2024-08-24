@@ -36,10 +36,10 @@
         </tr>
         @foreach ($students as $student)
         <tr>
-            <td><a href="{{url('student/' . $student -> id)}}">{{$student -> id}}</a></td>
+            <td><a href="{{url('students/' . $student -> id)}}">{{$student -> id}}</a></td>
             <td>{{$student -> first_name}}</td>
             <td>{{$student -> last_name}}</td>
-            <td><a href="{{url('grade/'. $student -> grade -> id)}}">{{$student -> grade -> grade_name}}</a></td>
+            <td><a href="{{url('grades/'. $student -> grade -> id)}}">{{$student -> grade -> grade_name}}</a></td>
             <td>{{$student -> created_at}}</td>
             <td>{{$student -> updated_at}}</td>
         </tr>
@@ -54,7 +54,7 @@
         <th>Updated At</th>
         @foreach ($grades as $grade)
         <tr>
-            <td><a href="{{url('grade/'. $grade -> id)}}">{{$grade -> id}}</a></td>
+            <td><a href="{{url('grades/'. $grade -> id)}}">{{$grade -> id}}</a></td>
             <td>{{$grade -> grade_name}}</td>
             <td>{{$grade -> grade_order}}</td>
             <td>{{$grade -> created_at}}</td>
