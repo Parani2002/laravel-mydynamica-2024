@@ -24,6 +24,7 @@
             padding: 15px;
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <h1>Student Details</h1>
@@ -38,6 +39,7 @@
             <th>Updated Date</th>
             <th>Student Details</th>
         </tr>
+        
         @foreach ($students as $student)
         <tr>
             <td>{{$student -> id}}</td>
@@ -58,6 +60,7 @@
             
         @endforeach
     </table>
+    {{$students -> links()}}
 
     @foreach ($students as $student)
     <tr>
@@ -65,5 +68,7 @@
     </tr>
         
     @endforeach
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
