@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     @vite(['resources/css/app.css', 
-                'resources/js/app.js',
+            'resources/js/app.js',
     'public/assets/css/styles.css',
     'public/assets/js/datatables-simple-demo.js',
     'public/assets/js/scripts.js',
