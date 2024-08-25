@@ -42,4 +42,4 @@ Route::get('/500', [ErrorController::class, 'internalError']);
 
 Route::get('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'register']);
-Route::get('/forgot', [AuthController::class, 'forgotpassword']);
+Route::get('/password', [AuthController::class, 'forgotpassword']);
