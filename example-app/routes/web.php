@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\AuthController;
+use App\Models\Student;
 
 
 Route::get('/', function () {
@@ -14,10 +15,21 @@ Route::get('/home',function(){
     return view('pages.home');
 });
 Route::get('/tables',function(){
-    return view('pages.tables');
+    $students = Student::all();
+    return view('pages.tables',compact('students'));
 });
 Route::get('/charts',function(){
+    
     return view('pages.charts');
+});
+
+Route::get('/static',function(){
+    
+    return view('pages.static');
+});
+Route::get('/lightsidenav',function(){
+    
+    return view('pages.lightsidenav');
 });
 
 

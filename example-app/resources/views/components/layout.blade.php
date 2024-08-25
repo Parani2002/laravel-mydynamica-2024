@@ -19,8 +19,7 @@
     <div >
         {{$slot}}
     </div>
-    
     <x-footer />
-<x-scripts />  
+    <x-scripts />  
 </body>
 </html>
