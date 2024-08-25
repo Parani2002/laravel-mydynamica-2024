@@ -1,4 +1,4 @@
-<x-layout>
+<x-lightlayout>
     
         <main>
             <div class="container-fluid px-4">
@@ -22,4 +22,4 @@
         </main>
    
  
-</x-layout>
+</x-lightlayout>
