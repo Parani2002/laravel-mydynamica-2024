@@ -12,14 +12,20 @@
     'public/assets/demo/chart-area-demo.js',
                 'public/assets/demo/chart-bar-demo.js',
                 'public/assets/demo/chart-pie-demo.js',
-                'public/assets/demo/datatables-demo.js']);
+                'public/assets/demo/datatables-demo.js'])
 </head>
 <body class="sb-nav-fixed" >
-    <x-navigation />
-    <div >
-        {{$slot}}
+    <x-topnav />
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <x-sidenav />
+        </div>
+       
+        <div id="layoutSidenav_content">
+            {{$slot}}
+            <x-footer />
+        </div>
     </div>
-    <x-footer />
     <x-scripts />  
 </body>
 </html>
