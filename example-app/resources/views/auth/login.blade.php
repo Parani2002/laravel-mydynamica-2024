@@ -1,6 +1,5 @@
 <x-authlayout>
-<div id="layoutAuthentication">
-    <div id="layoutAuthentication_content">
+
         <main>
             <div class="container">
                 <div class="row justify-content-center">
@@ -22,33 +21,17 @@
                                         <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                        <a class="small" href="password.html">Forgot Password?</a>
-                                        <a class="btn btn-primary" href="index.html">Login</a>
+                                        <a class="small" href="/password">Forgot Password?</a>
+                                        <a class="btn btn-primary" href="/index">Login</a>
                                     </div>
                                 </form>
                             </div>
                             <div class="card-footer text-center py-3">
-                                <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
+                                <div class="small"><a href="/register">Need an account? Sign up!</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-    </div>
-    <div id="layoutAuthentication_footer">
-        <footer class="py-4 bg-light mt-auto">
-            <div class="container-fluid px-4">
-                <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                    <div>
-                        <a href="#">Privacy Policy</a>
-                        &middot;
-                        <a href="#">Terms &amp; Conditions</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-</div>
 </x-authlayout>

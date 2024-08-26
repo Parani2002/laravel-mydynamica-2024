@@ -14,9 +14,15 @@
         'public/assets/demo/chart-pie-demo.js',
         'public/assets/demo/datatables-demo.js'])
 </head>
-<body>
-    <div class="bg-primary">
+<body class="bg-primary">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
         {{$slot}}
+        </div>
+        <div id="layoutAuthentication_footer">
+            <x-footer />
+
+        </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
