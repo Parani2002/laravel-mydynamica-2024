@@ -4,11 +4,21 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\AuthController;
 use App\Models\Student;
-
-
+use App\Models\Grade;
+use App\Models\Subject;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\GradeController;
 Route::get('/', function () {
     $students = Student::all();
-    return view('pages.home',compact('students'));
+    $count = $students -> count();
+
+    $grades = Grade::all();
+    $grade_count = $grades -> count();
+
+    $subjects = Subject::all();
+    $subject_count = $subjects -> count();
+    return view('pages.home',compact('students','count','grade_count','subject_count'));
 });
 
 
@@ -46,3 +56,6 @@ Route::get('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'register']);
 Route::get('/password', [AuthController::class, 'forgotpassword']);
 
+Route::resource('students', StudentController::class);
+Route::resource('grades', GradeController::class);
+Route::resource('subjects', SubjectController::class);
