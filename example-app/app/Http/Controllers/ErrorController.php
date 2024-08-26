@@ -22,6 +22,7 @@ class ErrorController extends Controller
         return view('error.500');
     }
 
+
     /**
      * Show the form for creating a new resource.
      */
@@ -43,7 +44,7 @@ class ErrorController extends Controller
      */
     public function show(string $id)
     {
-        //
+       
     }
 
     /**

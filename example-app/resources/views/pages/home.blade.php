@@ -550,6 +550,7 @@
                                 </tr>
                             </tbody>
                         </table>
+                        {{-- <x-table /> --}}
                     </div>
                 </div>
             </div>
