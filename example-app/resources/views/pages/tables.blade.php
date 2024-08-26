@@ -27,8 +27,7 @@
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Grade ID</th>
-                                    <th>Created At</th>
-                                    <th>Updated At</th>
+                                 
                                 </tr>
                             </thead>
                             <tfoot>
@@ -36,9 +35,8 @@
                                     <th>Student ID</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
-                                    <th>Grade ID</th>
-                                    <th>Created At</th>
-                                    <th>Updated At</th>
+                                    <th>Grade Name</th>
+                              
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -47,9 +45,8 @@
                                     <td>{{$student -> id}}</td>
                                     <td>{{$student -> first_name}}</td>
                                     <td>{{$student -> last_name}}</td>
-                                    <td>{{$student -> grade_id}}</td>
-                                    <td>{{$student -> created_at}}</td>
-                                    <td>{{$student -> updated_at}}</td>
+                                    <td>{{$student -> grade ->  grade_name}}</td>
+                                  
                                 </tr>
                                     
                                 @endforeach

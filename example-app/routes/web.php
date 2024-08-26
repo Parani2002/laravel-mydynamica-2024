@@ -7,7 +7,8 @@ use App\Models\Student;
 
 
 Route::get('/', function () {
-    return view('pages.home');
+    $students = Student::all();
+    return view('pages.home',compact('students'));
 });
 
 
