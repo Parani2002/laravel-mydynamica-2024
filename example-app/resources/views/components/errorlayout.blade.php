@@ -15,8 +15,14 @@
         'public/assets/demo/datatables-demo.js'])
 </head>
 <body>
-    <div>
-        {{$slot}}
+  
+    <div id="layoutError">
+        <div id="layoutError_content">
+            {{$slot}}
+        </div>
+        <div id="layoutError_footer">
+            <x-footer />
+        </div>
     </div>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
