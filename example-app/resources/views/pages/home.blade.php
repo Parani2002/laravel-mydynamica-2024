@@ -88,6 +88,7 @@
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Grade Name</th>
+                                    <th>Show</th>
                                     
                                 </tr>
                             </thead>
@@ -97,6 +98,7 @@
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Grade Name</th>
+                                    <th>Show</th>
                                     
                                 </tr>
                             </tfoot>
@@ -107,6 +109,7 @@
                                     <td>{{$student -> first_name}}</td>
                                     <td>{{$student -> last_name}}</td>
                                     <td>{{$student -> grade -> grade_name}}</td>
+                                    <td><a href="{{url('students/'. $student -> id)}}">Show</a></td>
                                 
                                 </tr>
                                     

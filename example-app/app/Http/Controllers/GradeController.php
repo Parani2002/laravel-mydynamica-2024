@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Grade;
+use App\Models\Student;
+use App\Models\Subject;
 class GradeController extends Controller
 {
     /**
@@ -12,7 +14,11 @@ class GradeController extends Controller
     public function index()
     {
         $grades = Grade::all();
-        return view('grade.index', compact('grades'));
+        $grades_count = $grades -> count();
+
+        $students_count = Student::all() -> count();
+        $subjects_count = Subject::all() -> count();
+        return view('grade.index', compact('grades','grades_count','students_count','subjects_count'));
     }
 
     /**
@@ -39,7 +45,12 @@ class GradeController extends Controller
         $students = Grade::find($id) -> students;
         $subjects = Grade::find($id) -> subjects;
         $grade = Grade::find($id);
-        return view('grade.show', compact('students','subjects','grade'));
+
+        $grades_count = Grade::all() -> count();
+        $students_count = Student::all() -> count();
+        $subjects_count = Subject::all() -> count();
+
+        return view('grade.show', compact('students','subjects','grade','id','grades_count','students_count','subjects_count'));
     }
 
     /**

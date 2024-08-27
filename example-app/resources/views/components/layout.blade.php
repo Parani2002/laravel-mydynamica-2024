@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-
+    
     @vite(['resources/css/app.css', 
             'resources/js/app.js',
     'public/assets/css/styles.css',
@@ -23,7 +23,9 @@
             <x-sidenav />
         </div>
         <div id="layoutSidenav_content">
+          
             {{$slot}}
+           
             <x-footer />
         </div>
     </div>

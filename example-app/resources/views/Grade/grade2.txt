@@ -1,11 +1,9 @@
-<x-layout>
-    <main>
-        
+<main>
             <div class="container-fluid px-4">
                 <h1 class="mt-4">Dashboard</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item active"><a href="/">Dashboard</a></li>
-                    <li class="breadcrumb-item active"><a href="/students">students</a></li>
+                    <li class="breadcrumb-item active"><a href="/grades">grades</a></li>
                     <li class="breadcrumb-item">{{$id}}</li>
                 </ol>
                 <div class="row">
@@ -73,43 +71,82 @@
                     
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-xl-6">
                     <div class="card mb-4">
                         <div class="card-header">
-                        <i class="fas fa-chart-area me-1"></i>
-                            Student Details
+                            <i class="fas fa-chart-area me-1"></i>
+                            Grade Details
                         </div>
-                    {{-- <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div> --}}
+                        {{-- <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div> --}}
                         <div class="card-body">
                             <table id="datatablesSimple">
-                                <tr>
-                                    <th>Student ID</th>
-                                    <td>{{$student -> id}}</td>
-                                </tr>
-                                <tr>
-                                    <th>First Name</th>
-                                    <td>{{$student -> first_name}}</td>
-                                </tr>
-                                <tr>
-                                    <th>Last Name</th>
-                                    <td>{{$student -> last_name}}</td>
-                                </tr>
-                                <tr>
-                                    <th>Grade Name</th>
-                                    <td>{{$student -> grade -> grade_name}}</td>
-                                </tr>
+                            <tr>
+                                <th>Grade ID</th>
+                                <td>{{$grade -> id}}</td>
+                            </tr>
+                            <tr>
+                                <th>Grade Name</th>
+                                <td>{{$grade -> grade_name}}</td>
+                            </tr>
+                            <tr>
+                                <th>Grade Group</th>
+                                <td>{{$grade -> grade_group}}</td>
+                            </tr>
+                            <tr>
+                                <th>Grade Order</th>
+                                <td>{{$grade -> grade_order}}</td>
+                            </tr>
                             </table>
                         </div>
                     </div>
                 </div>
+               
+                <div class="col-xl-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-chart-bar me-1"></i>
+                            Student Details
+                        </div>
+                        {{-- <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div> --}}
+                        <div class="card-body">
+                            <table id="datatablesSimple">
+                                <thead>
+                                    <tr>
+                                        <th>Student ID</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Grade Name</th>
+                                     
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Student ID</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Grade Name</th>
+                                     
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @foreach ($students as $student)
+                                    <tr>
+                                        <td>{{$student -> id}}</td>
+                                        <td>{{$student -> first_name}}</td>
+                                        <td>{{$student -> last_name}}</td>
+                                        <td>{{$student -> grade ->  grade_name}}</td>
+                                      
+                                    </tr>
+                                        
+                                    @endforeach
+                                </tbody>
+                               
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-           
-           
-           
-       
         </div>
-
-</main>
-</x-layout>
+    </main>
