@@ -22,6 +22,18 @@ Route::get('/', function () {
 });
 
 
+// Route::get('/component', function () {
+//     $students = Student::all();
+//     $count = $students -> count();
+
+//     $grades = Grade::all();
+//     $grade_count = $grades -> count();
+
+//     $subjects = Subject::all();
+//     $subject_count = $subjects -> count();
+//     return view('components.layout',compact('students','count','grade_count','subject_count'));
+// });
+
 // Route::get('/home',function(){
 //     $students = Student::all();
 //     return view('pages.home', compact('students'));
