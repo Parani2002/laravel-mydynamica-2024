@@ -53,7 +53,7 @@
                             <div class="d-flex justify-content-center p-2">
                                 <i class="fa fa-users px-2 " style="align-self: center;width:30px; height:50px;"></i>
                                 <div class="card-body"><h3 class="text-center">Teachers</h3></div>
-                                <div class="card-body"><h3 class="text-center">100</h3></div>
+                                <div class="card-body"><h3 class="text-center">120</h3></div>
 
                             </div>
                             

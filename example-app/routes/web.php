@@ -9,50 +9,28 @@ use App\Models\Subject;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\GradeController;
+
+
 Route::get('/', function () {
+    $count = Student::all() -> count();
+    $grade_count = Grade::all() -> count();
+    $subject_count = Subject::all() -> count();
     $students = Student::all();
-    $count = $students -> count();
-
-    $grades = Grade::all();
-    $grade_count = $grades -> count();
-
-    $subjects = Subject::all();
-    $subject_count = $subjects -> count();
     return view('pages.home',compact('students','count','grade_count','subject_count'));
 });
 
-
-// Route::get('/component', function () {
-//     $students = Student::all();
-//     $count = $students -> count();
-
-//     $grades = Grade::all();
-//     $grade_count = $grades -> count();
-
-//     $subjects = Subject::all();
-//     $subject_count = $subjects -> count();
-//     return view('components.layout',compact('students','count','grade_count','subject_count'));
-// });
-
-// Route::get('/home',function(){
-//     $students = Student::all();
-//     return view('pages.home', compact('students'));
-// });
 Route::get('/tables',function(){
     $students = Student::all();
     return view('pages.tables',compact('students'));
 });
 Route::get('/charts',function(){
-    
     return view('pages.charts');
 });
 
 Route::get('/static',function(){
-    
     return view('pages.static');
 });
 Route::get('/lightsidenav',function(){
-    
     return view('pages.lightsidenav');
 });
 

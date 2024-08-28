@@ -24,8 +24,6 @@
         </div>
         <div id="layoutSidenav_content">
             {{$slot}}
-            
-           
             <x-footer />
         </div>
     </div>
