@@ -6,18 +6,18 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Dashboard
                     </a>
-                    {{-- <a class="nav-link" href="/students">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <a class="nav-link" href="/students">
+                        <div class="sb-nav-link-icon"><i class="fas fa-user-graduate"></i></div>
                         Students
                     </a>
                     <a class="nav-link" href="/grades">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
                         Grades
                     </a>
                     <a class="nav-link" href="/subjects">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                         Subjects
-                    </a> --}}
+                    </a>
                     <div class="sb-sidenav-menu-heading">Interface</div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

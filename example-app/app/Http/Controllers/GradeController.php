@@ -14,11 +14,7 @@ class GradeController extends Controller
     public function index()
     {
         $grades = Grade::all();
-        $grades_count = $grades -> count();
-
-        $students_count = Student::all() -> count();
-        $subjects_count = Subject::all() -> count();
-        return view('grade.index', compact('grades','grades_count','students_count','subjects_count'));
+        return view('grade.index', compact('grades'));
     }
 
     /**
@@ -46,11 +42,7 @@ class GradeController extends Controller
         $subjects = Grade::find($id) -> subjects;
         $grade = Grade::find($id);
 
-        $grades_count = Grade::all() -> count();
-        $students_count = Student::all() -> count();
-        $subjects_count = Subject::all() -> count();
-
-        return view('grade.show', compact('students','subjects','grade','id','grades_count','students_count','subjects_count'));
+        return view('grade.show', compact('students','subjects','grade','id'));
     }
 
     /**
