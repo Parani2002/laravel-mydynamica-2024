@@ -50,7 +50,13 @@
                     </div>
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-danger text-white mb-4">
-                            <div class="card-body">Teachers</div>
+                            <div class="d-flex justify-content-center p-2">
+                                <i class="fa fa-users px-2 " style="align-self: center;width:30px; height:50px;"></i>
+                                <div class="card-body"><h3 class="text-center">Teachers</h3></div>
+                                <div class="card-body"><h3 class="text-center">100</h3></div>
+
+                            </div>
+                            
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <a class="small text-white stretched-link" href="/teachers">View Details</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
