@@ -59,14 +59,14 @@
                 </div>
             </div>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">Grade</h1>
-                <ol class="breadcrumb mb-4">
+                {{-- <h1 class="mt-4">Grade</h1> --}}
+                {{-- <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
                     <li class="breadcrumb-item active">Grade Tables</li>
-                </ol>
+                </ol> --}}
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="mb-0">{{$student -> grade-> grade_name}} Grade Details</h3>
+                        <h3 class="mb-0">{{$student -> first_name . $student -> last_name}} Details</h3>
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple" class="table table-striped table-bordered">
@@ -128,19 +128,19 @@
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple" class="table table-striped table-bordered">
-                            <tbody>
+                            {{-- <tbody>
                                 <tr>
                                     <th>Student ID</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                 </tr>
-                                @foreach ($students as $student)
+                                @foreach ($student -> grade as $student)
                                     <tr>
                                         <td>{{ $student->id }}</td>
                                         <td> {{ $student->first_name }}</td>
                                         <td>{{ $student->last_name }}</td>
                                 @endforeach
-                            </tbody>
+                            </tbody> --}}
                         </table>
                     </div>
                 </div>
