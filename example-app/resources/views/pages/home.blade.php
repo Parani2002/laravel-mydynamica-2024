@@ -9,9 +9,10 @@
                 <div class="row">
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-primary text-white mb-4">
-                            <div style="display: flex">
-                                <div class="card-body">Students</div>
-                                <div class="card-body">{{$count}}</div>
+                            <div class="d-flex justify-content-center p-2">
+                                <i class="fas fa-user-graduate px-2 " style="align-self: center;width:30px;height:50px;"></i>
+                                <div class="card-body"><h3 class="text-center">Students</h3></div>
+                                <div class="card-body"><h3 class="text-center">{{$count}}</h3></div>
                             </div>
                             
     
@@ -23,9 +24,10 @@
                     </div>
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-warning text-white mb-4">
-                            <div style="display: flex">
-                                <div class="card-body">Grades</div>
-                                <div class="card-body">{{$grade_count}}</div>
+                            <div class="d-flex justify-content-center p-2">
+                                <i class="fas fa-clipboard-list px-2 " style="align-self: center;width:30px;height:50px;"></i>
+                                <div class="card-body"><h3 class="text-center">Grades</h3></div>
+                                <div class="card-body"><h3 class="text-center">{{$grade_count}}</h3></div>
                             </div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <a class="small text-white stretched-link" href="/grades">View Details</a>
@@ -35,9 +37,10 @@
                     </div>
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-success text-white mb-4">
-                            <div style="display: flex;">
-                                <div class="card-body">Subjects</div>
-                                <div class="card-body">{{$subject_count}}</div>
+                            <div class="d-flex p-2 justify-content-center">
+                                <i class="fas fa-book-open px-2 " style="align-self: center;width:30px; height:50px;"></i>
+                                <div class="card-body" ><h3 class="text-center">Subjects</h3></div>
+                                <div class="card-body"><h3 class="text-center">{{$subject_count}}</h3></div>
                             </div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <a class="small text-white stretched-link" href="/subjects">View Details</a>
