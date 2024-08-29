@@ -46,11 +46,8 @@ class SubjectController extends Controller
         $grades = Subject::find($id) -> grade;
         $subject = Subject::find($id);
 
-        $grades_count = Grade::all() -> count();
-
-        $students_count = Student::all() -> count();
-        $subjects_count = Subject::all() -> count();
-        return view('subject.show', compact('students','grades','subject','grades_count','students_count','subjects_count','id'));
+       
+        return view('subject.show', compact('students','grades','subject','id'));
     }
 
     /**

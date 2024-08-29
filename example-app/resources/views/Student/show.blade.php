@@ -62,8 +62,8 @@
                 <h1 class="mt-4">Student</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                    <li class="breadcrumb-item active"><a href="/students">students</a></li>
-                    <li class="breadcrumb-item">{{$id}}</li>
+                    <li class="breadcrumb-item active"><a href="/students">Students</a></li>
+                    <li class="breadcrumb-item">{{$student -> first_name . " " . $student -> last_name}}</li>
 
                 </ol>
                 <div class="card">

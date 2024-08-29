@@ -64,8 +64,8 @@
             <h1 class="mt-4">Tables</h1>
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                <li class="breadcrumb-item active"><a href="/subjects">subjects</a></li>
-                <li class="breadcrumb-item">{{$id}}</li>
+                <li class="breadcrumb-item active"><a href="/subjects">Subjects</a></li>
+                <li class="breadcrumb-item">{{$subject -> subject_name}}</li>
 
             </ol>
             <div class="card mb-4">

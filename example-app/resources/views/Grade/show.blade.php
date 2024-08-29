@@ -62,7 +62,7 @@
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
                 <li class="breadcrumb-item active"><a href="/grades">Grades</a></li>
-                <li class="breadcrumb-item">{{$id}}</li>
+                <li class="breadcrumb-item">{{$grade -> grade_name}}</li>
             </ol>
             <div class="card">
                 <div class="card-header">
