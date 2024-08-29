@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\AuthController;
@@ -9,7 +8,6 @@ use App\Models\Subject;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\GradeController;
-
 
 Route::get('/', function () {
     $count = Student::all() -> count();
@@ -33,10 +31,6 @@ Route::get('/static',function(){
 Route::get('/lightsidenav',function(){
     return view('pages.lightsidenav');
 });
-
-
-
-
 
 Route::get('/401', [ErrorController::class, 'unAuthorize']);
 Route::get('/404', [ErrorController::class, 'notFound']);

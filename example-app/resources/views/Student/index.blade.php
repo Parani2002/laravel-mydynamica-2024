@@ -108,6 +108,10 @@
                             <td>{{$student -> first_name}}</td>
                             <td>{{$student -> last_name}}</td>
                             <td>{{$student -> grade -> grade_name}}</td>
+                            {{-- <td>
+                                <button type="button" class="btn btn-primary">Primary</button>
+                            </td> --}}
+                            
                             <td><a href="{{url('students/'. $student -> id)}}">Show</a></td>
                           
                         </tr>
