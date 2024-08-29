@@ -83,7 +83,7 @@
                             </tr>
                             <tr>
                                 <td>Grade Name</td>
-                                <td>{{ $grade->grade_name }}</td>
+                                <td>{{ $grade ? $grade->grade_name : "No Grade Name Assigned" }}</td>
                             </tr>
                             <tr>
                                 <td>Grade Group</td>
@@ -91,11 +91,11 @@
                             </tr>
                             <tr>
                                 <td>Grade order</td>
-                                <td>{{ $grade->grade_order }}</td>
+                                <td>{{ $grade ? $grade->grade_order : "No Order Present" }}</td>
                             </tr>
                             <tr>
                                 <td>Grade Color</td>
-                                <td>{{ $grade->grade_color }}</td>
+                                <td>{{ $grade -> grade_color !== NULL  ? $grade -> grade_color : 'No Color Present'}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -108,6 +108,9 @@
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple" class="table table-striped table-bordered">
+                        @if ($grade -> subjects -> isEmpty())
+                            <h3 class="text-center">No Subjects Present</h3>
+                        @else
                         <tbody>
                             <tr>
                                 <th>Subject ID</th>
@@ -124,6 +127,8 @@
                                 </tr>
                             @endforeach
                         </tbody>
+                        @endif
+                       
                     </table>
                 </div>
             </div>
