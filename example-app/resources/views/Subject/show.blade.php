@@ -1,126 +1,103 @@
 <x-layout>
-    
-    
-        <main>
-            {{-- <div class="container-fluid px-4">
-                <h1 class="mt-4">Dashboard</h1>
-                <ol class="breadcrumb mb-4">
-                    <li class="breadcrumb-item active"><a href="/">Dashboard</a></li>
-                    <li class="breadcrumb-item active"><a href="/subjects">subjects</a></li>
-                    <li class="breadcrumb-item active">{{$id}}</li>
-
-                </ol>
-                <div class="row">
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card bg-primary text-white mb-4">
-                            <div style="display: flex">
-                                <div class="card-body">Students</div>
-                                <div class="card-body">{{$students_count}}</div>
-                            </div>
-                            
-    
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="/students">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card bg-warning text-white mb-4">
-                            <div style="display: flex">
-                                <div class="card-body">Grades</div>
-                                <div class="card-body">{{$grades_count}}</div>
-                            </div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="/grades">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card bg-success text-white mb-4">
-                            <div style="display: flex;">
-                                <div class="card-body">Subjects</div>
-                                <div class="card-body">{{$subjects_count}}</div>
-                            </div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="/subjects">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card bg-danger text-white mb-4">
-                            <div class="card-body">Teachers</div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-        <div class="container-fluid px-4">
-            <h1 class="mt-4">Tables</h1>
+    <main>
+        <div class="container-fluid px-4 pt-4">
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
                 <li class="breadcrumb-item active"><a href="/subjects">Subjects</a></li>
                 <li class="breadcrumb-item">{{$subject -> subject_name}}</li>
-
             </ol>
-            <div class="card mb-4">
-                <div class="card-body">
-                    DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                    <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                    
-                </div>
-            </div>
-            <div class="card mb-4">
+            <div class="card">
                 <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                    DataTable Example
+                    <h3 class="mb-0">{{$subject-> subject_name}} Grade Details</h3>
                 </div>
                 <div class="card-body">
-                    <table id="datatablesSimple">
+                    <table id="datatablesSimple" class="table table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Attribute</th>
+                                <th>Value</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
-                            </tr>
-                        </tfoot>
                         <tbody>
-                          @foreach ($students as $student)
-                              <tr>
-                                    <td>{{$student -> id}}</td>
-                                    <td>{{$student -> first_name}}</td>
-                                    <td>{{$student -> last_name}}</td>
-                                    <td>{{$student -> grade -> grade_name}}</td>
-                                    <td><a href="{{url('students/'. $student -> id)}}">Show</a></td>
-                              </tr>
-                          @endforeach
+                            <tr>
+                                <td>Subject ID</td>
+                                <td>{{ $subject-> id }}</td>
+                            </tr>
+                            <tr>
+                                <td>Subject Name</td>
+                                <td>{{ $subject ? $subject-> subject_name : "No Grade Name Assigned" }}</td>
+                            </tr>
+                            <tr>
+                                <td>Grade Order</td>
+                                <td>{{ $subject-> subject_order }}</td>
+                            </tr>
+                          
+                            <tr>
+                                <td>Subject Color</td>
+                                <td>{{ $subject -> subject_color !== NULL  ? $subject -> subject_color : 'No Color Present'}}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="mb-0">Subject Details</h3>
+                </div>
+                <div class="card-body">
+                    <table id="datatablesSimple" class="table table-striped table-bordered">
+                        @if ($grades ->  isEmpty())
+                            <h3 class="text-center">No Grades Present</h3>
+                        @else
+                        <tbody>
+                            <tr>
+                                <th>Grade ID</th>
+                                <th>Grade Name</th>
+                                <th>Grade Group</th>
+                                <th>Grade Order</th>
+                                <th>Grade Color</th>
+                            </tr>
+                            @foreach ($grades as $subject)
+                                <tr>
+                                    <td>{{ $grade -> id }}</td>
+                                    <td>{{ $grade -> grade_name }}</td>
+                                    <td>{{ $grade -> grade_group }}</td>
+                                    <td>{{ $grade -> grade_order }}</td>
+                                    <td>{{ $grade -> grade_color }}</td>
+
+                                </tr>
+                            @endforeach
+                        </tbody>
+                        @endif
+                       
+                    </table>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="mb-0">Student Details</h3>
+                </div>
+                <div class="card-body">
+                    <table id="datatablesSimple" class="table table-striped table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                            </tr>
+                            @foreach ($subject -> students as $student)
+                                <tr>
+                                    <td>{{ $student->id }}</td>
+                                    <td> {{ $student->first_name }}</td>
+                                    <td>{{ $student->last_name }}</td>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
-   
-
-
-   
 </x-layout>
