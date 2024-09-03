@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Teacher;
 
 class TeacherController extends Controller
 {
@@ -27,7 +28,16 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $teacher = new Teacher;
+        $teacher -> emailaddress = $request -> email;
+        $teacher -> firstname = $request -> firstname;
+        $teacher -> lastname = $request -> lastname;
+        $teacher -> age = $request -> age;
+        $teacher -> subject = $request -> subject;
+        $teacher -> save();
+        return redirect() -> back();
+
+
     }
 
     /**
