@@ -39,12 +39,11 @@ Route::get('/401', [ErrorController::class, 'unAuthorize']);
 Route::get('/404', [ErrorController::class, 'notFound']);
 Route::get('/500', [ErrorController::class, 'internalError']);
 
-Route::get('/login', [AuthController::class, 'login']);
+Route::get('/login', AuthController::class);
 Route::get('/register', [AuthController::class, 'register']);
 Route::get('/password', [AuthController::class, 'forgotpassword']);
 
 Route::resource('students', StudentController::class);
 Route::resource('grades', GradeController::class);
 Route::resource('subjects', SubjectController::class);
-
 Route::resource('teachers', TeacherController::class);

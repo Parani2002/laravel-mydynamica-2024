@@ -10,20 +10,11 @@ class AuthController extends Controller
      * Display a listing of the resource.
      */
     
-    public function login()
+    public function index()
     {
         return view('auth.login');
     }
-    public function register()
-    {
-        return view('auth.register');
-    }
-    public function forgotpassword()
-    {
-        return view('auth.password');
-    }
-    
-
+  
     /**
      * Show the form for creating a new resource.
      */
@@ -37,7 +28,7 @@ class AuthController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view('auth.register');
     }
 
     /**
@@ -61,7 +52,7 @@ class AuthController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return view('auth.password');
     }
 
     /**
