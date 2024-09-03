@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Models\Student;
 use App\Models\Grade;
 use App\Models\Subject;
+use App\Models\Teacher;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\GradeController;
@@ -14,8 +15,9 @@ Route::get('/', function () {
     $count = Student::all() -> count();
     $grade_count = Grade::all() -> count();
     $subject_count = Subject::all() -> count();
+    $teacher_count = Teacher::all() -> count();
     $students = Student::all();
-    return view('pages.home',compact('students','count','grade_count','subject_count'));
+    return view('pages.home',compact('students','count','grade_count','subject_count','teacher_count'));
 });
 
 Route::get('/tables',function(){

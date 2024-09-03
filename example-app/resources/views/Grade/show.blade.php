@@ -98,6 +98,32 @@
                     </table>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="mb-0">Student Details</h3>
+                </div>
+                <div class="card-body">
+                    <table id="datatablesSimple" class="table table-striped table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Teacher ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                                <th>Email Address</th>
+                            </tr>
+                            @foreach ($grade -> teachers as $teacher)
+                                <tr>
+                                    <td>{{ $teacher -> id }}</td>
+                                    <td> {{ $teacher -> firstname }}</td>
+                                    <td>{{ $teacher -> lastname }}</td>
+                                    <td>{{ $teacher -> age}}</td>
+                                    <td>{{ $teacher -> emailaddress}}</td>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
 </x-layout>
