@@ -80,28 +80,6 @@
                 </div>
                 <br>
                 <br>
-                {{-- <div class="card">
-                    <div class="card-header">
-                        <h3 class="mb-0">Student Details</h3>
-                    </div>
-                    <div class="card-body">
-                        <table id="datatablesSimple" class="table table-striped table-bordered">
-                            {{-- <tbody>
-                                <tr>
-                                    <th>Student ID</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                </tr>
-                                @foreach ($student -> grade as $student)
-                                    <tr>
-                                        <td>{{ $student->id }}</td>
-                                        <td> {{ $student->first_name }}</td>
-                                        <td>{{ $student->last_name }}</td>
-                                @endforeach
-                            </tbody> --}}
-                        </table>
-                    </div>
-                </div>
             </div>
 
 </main>
