@@ -3,9 +3,6 @@
         <h1>Teacher Form</h1>
         <form action="/teachers" method="post" class="d-flex flex-column">
             @csrf
-            <label for="email">Email Adress</label>
-            <input type="email" name="email" id="email">
-    
             <label for="firstname">First Name</label>
             <input type="text" name="firstname" id="firstname">
     
@@ -14,7 +11,10 @@
     
             <label for="age">Age</label>
             <input type="number" name="age" id="age">
-    
+
+            <label for="email">Email Adress</label>
+            <input type="email" name="email" id="email">
+            
             <label for="subject">Subject</label>
             <input type="text" class="mb-4" name="subject" id="subject">
     
