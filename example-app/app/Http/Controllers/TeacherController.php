@@ -12,7 +12,8 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        //
+        $teachers = Teacher::all();
+        return view('teacher.index', compact('teachers'));
     }
 
     /**
@@ -35,7 +36,7 @@ class TeacherController extends Controller
         $teacher -> age = $request -> age;
         $teacher -> subject = $request -> subject;
         $teacher -> save();
-        return redirect() -> back();
+        return redirect('/teachers');
 
 
     }
@@ -45,7 +46,8 @@ class TeacherController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $teacher = Teacher::find($id);
+        return view ('teacher.show', compact('teacher'));
     }
 
     /**
