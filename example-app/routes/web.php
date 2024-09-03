@@ -8,6 +8,7 @@ use App\Models\Subject;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\GradeController;
+use App\Http\Controllers\TeacherController;
 
 Route::get('/', function () {
     $count = Student::all() -> count();
@@ -43,3 +44,5 @@ Route::get('/password', [AuthController::class, 'forgotpassword']);
 Route::resource('students', StudentController::class);
 Route::resource('grades', GradeController::class);
 Route::resource('subjects', SubjectController::class);
+
+Route::resource('teachers', TeacherController::class);
