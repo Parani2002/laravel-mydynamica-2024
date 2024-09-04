@@ -12,7 +12,7 @@
                 </ol>
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="mb-0">{{$teacher -> first_name . " " . $teacher -> last_name}} Details</h3>
+                        <h3 class="mb-0">{{$teacher -> firstname . " " . $teacher -> lastname}} Details</h3>
                     </div>     
                         <div class="card-body">
                             <table id="datatablesSimple" class="table table-striped table-bordered">
@@ -84,7 +84,7 @@
                 </div>
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="mb-0">Subject Details</h3>
+                        <h3 class="mb-0">Grade Details</h3>
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple" class="table table-striped table-bordered">

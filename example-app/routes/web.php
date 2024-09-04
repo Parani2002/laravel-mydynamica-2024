@@ -11,6 +11,8 @@ use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\TeacherController;
 
+
+
 Route::get('/', function () {
     $count = Student::all() -> count();
     $grade_count = Grade::all() -> count();
@@ -39,7 +41,7 @@ Route::get('/401', [ErrorController::class, 'unAuthorize']);
 Route::get('/404', [ErrorController::class, 'notFound']);
 Route::get('/500', [ErrorController::class, 'internalError']);
 
-Route::get('/login', AuthController::class);
+Route::get('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'register']);
 Route::get('/password', [AuthController::class, 'forgotpassword']);
 
