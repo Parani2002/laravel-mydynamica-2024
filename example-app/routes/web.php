@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get('/tables',function(){
-    $students = Student::all();
+    $students = Student::paginate(25);
     return view('pages.tables',compact('students'));
 });
 Route::get('/charts',function(){

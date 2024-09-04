@@ -17,7 +17,7 @@ class SubjectController extends Controller
 
         $students_count = Student::all() -> count();
         $subjects_count = Subject::all() -> count();
-        $subjects = Subject::all();
+        $subjects = Subject::paginate(25);
         return view('subject.index', compact('subjects','grades_count','students_count','subjects_count'));
     }
 

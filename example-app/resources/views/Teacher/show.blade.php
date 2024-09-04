@@ -82,6 +82,8 @@
                         </table>
                     </div>
                 </div>
+                <br>
+                
                 <div class="card">
                     <div class="card-header">
                         <h3 class="mb-0">Grade Details</h3>

@@ -75,7 +75,7 @@
                 </div>
             </div>
             <br>
-            <br>
+            
             <div class="card">
                 <div class="card-header">
                     <h3 class="mb-0">Student Details</h3>
