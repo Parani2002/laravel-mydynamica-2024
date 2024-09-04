@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\Grade;
 use App\Models\Subject;
+use Illuminate\Support\Facades\DB;
 class StudentController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::all();
+        $students = Student ::paginate(25);
         return view('student.index', compact('students'));
     }
 

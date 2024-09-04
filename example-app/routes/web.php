@@ -18,7 +18,7 @@ Route::get('/', function () {
     $grade_count = Grade::all() -> count();
     $subject_count = Subject::all() -> count();
     $teacher_count = Teacher::all() -> count();
-    $students = Student::all();
+    $students = Student::paginate(25);
     return view('pages.home',compact('students','count','grade_count','subject_count','teacher_count'));
 });
 
