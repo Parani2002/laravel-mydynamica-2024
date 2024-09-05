@@ -1,12 +1,13 @@
 <x-layout>
     <main>
         <div class="container-fluid px-4 pt-4">
+            <h1 class="mt-4 text-white">Student Details</h1>
 
     
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Dashboard</a></li>
         <li class="breadcrumb-item active"><a href="/students" class="text-decoration-none">Students</a></li>
-        <li class="breadcrumb-item text-primary">{{$student -> id}}</li>
+        <li class="breadcrumb-item active">{{$student -> first_name . " ". $student -> last_name}}</li>
 
     </ol>
    
