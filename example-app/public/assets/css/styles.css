@@ -11095,7 +11095,7 @@ body {
 
 .datatable-bottom {
   padding: 0;
-  visibility: hidden;
+  visibility: ;
 }
 
 .datatable-top > nav:first-child,

@@ -21,7 +21,7 @@
                     DataTable Example
                 </div>
                 <div class="card-body">
-                    <table id="datatablesSimple">
+                    <table id="datatablesSimple" class="table table-dark table-hover">
                         <thead>
                             <tr>
                                 <th>Student ID</th>
@@ -50,7 +50,8 @@
                                 <td>{{$student -> last_name}}</td>
                                 <td>{{$student -> grade -> grade_name}}</td>
                                 
-                                <td><a href="{{url('students/'. $student -> id)}}">Show</a></td>
+                                <td><a href="{{url('students/'. $student -> id)}}" type="button" class="btn btn-primary px-4 py-2 align-middle">Show</a></td>
+                                
                               
                             </tr>
                                 

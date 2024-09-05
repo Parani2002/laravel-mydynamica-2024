@@ -1,8 +1,8 @@
-<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark flex-sm-row justify-content-between">
     <div class="d-flex justify-content-around p-4">
-        <img src="{{ Vite::asset('public/assets/img/jhc_logo.png') }}" class="h-5 w-5" style="width:40px;height:40px">
+        <img src="{{ Vite::asset('public/assets/img/jhc_logo.png') }}" width="40" height="40">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="/">Jaffna Hindu College</a>
+        <a class="navbar-brand ps-3 d-none d-lg-block" href="/">Jaffna Hindu College</a>
     </div>
     
     <!-- Sidebar Toggle-->
@@ -15,7 +15,7 @@
         </div>
     </form>
     <!-- Navbar-->
-    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+    {{-- <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -25,5 +25,5 @@
                 <li><a class="dropdown-item" href="#!">Logout</a></li>
             </ul>
         </li>
-    </ul>
+    </ul> --}}
 </nav>

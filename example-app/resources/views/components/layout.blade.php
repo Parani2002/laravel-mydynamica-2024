@@ -21,7 +21,7 @@
         <div id="layoutSidenav_nav">
             <x-sidenav />
         </div>
-        <div id="layoutSidenav_content">
+        <div id="layoutSidenav_content" style="background-color: rgb(48, 49, 50)">
             {{$slot}}
             <x-footer />
         </div>
