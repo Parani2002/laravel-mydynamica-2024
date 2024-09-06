@@ -4178,11 +4178,11 @@ textarea.form-control-lg {
   --bs-card-inner-border-radius: calc(0.375rem - 1px);
   --bs-card-cap-padding-y: 0.5rem;
   --bs-card-cap-padding-x: 1rem;
-  --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
-  --bs-card-cap-color: ;
+  --bs-card-cap-bg: rgba(239, 239, 239, 0.1);
+  --bs-card-cap-color:white ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: #fff;
+  --bs-card-bg: #948b8b;
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
@@ -11256,6 +11256,7 @@ body {
     background-color: #C7C8CC;
     border-radius: 20px;
 }
+
 .nav-link:hover
 {
   background-color: rgc(55,58,69);

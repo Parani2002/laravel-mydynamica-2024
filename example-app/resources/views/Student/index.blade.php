@@ -1,6 +1,4 @@
 <x-layout>
-    
-    
         <main> 
         <div class="container-fluid px-4 pt-2" >
             <h1 class="mt-4 text-white">Students</h1>
@@ -8,20 +6,13 @@
                 <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Dashboard</a></li>
                 <li class="breadcrumb-item active">Students</li>
             </ol>
-            {{-- <div class="card mb-4">
-                <div class="card-body">
-                    DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                    <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                    
-                </div>
-            </div> --}}
-            <div class="card mb-2 border-white" style="background-color:rgb(48, 49, 50)">
-                {{-- <div class="card-header">
+            <div class="card mb-2 " style="background-color:rgb(48, 49, 50)">
+                <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    DataTable Example
-                </div> --}}
+                    Student List
+                </div>
                 <div class="card-body rounded">
-                    <table id="datatablesSimple" class="table table-dark table-hover">
+                    <table id="datatablesSimple" class="table table-striped table-dark">
                         <thead>
                             <tr>
                                 <th>Student ID</th>
@@ -50,11 +41,8 @@
                                 <td>{{$student -> last_name}}</td>
                                 <td>{{$student -> grade -> grade_name}}</td>
                                 
-                                <td><a href="{{url('students/'. $student -> id)}}" type="button" class="btn btn-primary px-4 py-2 align-middle">Show</a></td>
-                                
-                              
-                            </tr>
-                                
+                                <td><a href="{{url('students/'. $student -> id)}}" type="button" class="btn btn-primary px-4 py-2 align-middle">VIEW</a></td>
+                            </tr>     
                             @endforeach
                         </tbody>
                       

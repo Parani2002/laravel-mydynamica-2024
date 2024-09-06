@@ -25,7 +25,7 @@
                         <tr>
                             <td colspan="4">
                                 <div style="width: 150px;height:150px;border-radius: 75px;background-color:aqua;padding:5px">
-                                    <img src="{{ Vite::asset('public/assets/img/myimage.jpg') }}"  style="width:100%;height:100%;;object-fit:cover" class="card-img-center rounded-circle" alt="{{$student->first_name}}">
+                                    <img src="{{ Vite::asset('public/assets/img/myimage.jpg') }}"  style="width:100%;height:100%;" class="card-img-center rounded-circle" alt="{{$student->first_name}}">
                                 </div>
                             </td>
                             <td style="padding-left:100px" class="text-white">
@@ -42,7 +42,7 @@
             <div class="card mb-4 " style="background-color:#374259">
                 <div class="card-header text-white">
                     <i class="fas fa-book-open me-1"></i>
-                    <strong>Subject Information</strong>
+                    <strong>Subjects</strong>
                     
                 </div>
                 <div class="card-body" >
@@ -50,10 +50,10 @@
                         <h3 class="text-center">No Data!</h3>
                     @else
                         @foreach ($student -> subjects as $subject)
-                        <div style="margin-right: 10px;margin-bottom:10px; box-shadow:1px 1px 20px #111111; border-radius:20px;background-color:white">
-                            <a href="{{url('subjects/' . $subject -> id)}}" class="student-list text-decoration-none list-unstyled">
+                        <div style="margin-right: 10px;margin-bottom:10px; box-shadow:1px 1px 20px #111111; border-radius:20px;background-color:#374259" class="student-list">
+                            <a href="{{url('subjects/' . $subject -> id)}}" class="text-decoration-none list-unstyled" >
                                 <div class="card-body">
-                                    <li class="list group-item ">{{$subject -> subject_name}}</li>
+                                    <li class="list group-item text-white"><strong>{{$subject -> subject_name}}</strong></li>
                                 </div>
                             </a>
                         </div>

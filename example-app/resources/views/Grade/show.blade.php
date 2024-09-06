@@ -23,14 +23,14 @@
                     <h3 style="text-align: center">No Data!</h3>
                     @endif
                         @foreach ($grade -> students as $student)
-                        <div class="card mb-4" style="height:60px;margin-right: 10px10px;box-shadow: 1px 1px 20px #111111 ;border-radius: 20px;">
-                            <a href="/students/{{$student->id}}" class="student-list" style="text-decoration: none">
+                        <div class="card mb-4" style="height:60px;margin-right: 10px10px;box-shadow: 1px 1px 20px #111111 ;border-radius: 20px;background-color:white">
+                            <a href="/students/{{$student->id}}" class="student-list" style="text-decoration: none;">
                                 <div class="card-body" style="padding: 4px 4px 4px 8px;">
                                     <li class="list-group-item" style="display: flex; align-items: center;">
                                         <div style="width:50px;height:50px;border-radius: 25px ;background-color: aqua;padding:2px">
                                             <img src="{{ Vite::asset('public/assets/img/myimage.jpg') }}" style="width:100%;height:100%;object-fit:cover " class="card-img-center rounded-circle" alt="{{$student->first_name}}">
                                         </div>
-                                        <div style="display: inline; align-items: center;justify-content: center;margin-left: 30px" >
+                                        <div style="display: inline; align-items: center;justify-content: center;margin-left: 30px;" >
                                             {{$student->first_name}} {{$student->last_name}}
                                         </div>
                                     </li>
