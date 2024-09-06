@@ -15,7 +15,7 @@
                 'public/assets/demo/chart-pie-demo.js',
                 'public/assets/demo/datatables-demo.js'])
 </head>
-<body class="sb-nav-fixed" >
+<body class="sb-nav-fixed" style="background-color: rgb(48, 49, 50)" >
     <x-topnav />
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
@@ -23,7 +23,7 @@
         </div>
         <div id="layoutSidenav_content" style="background-color: rgb(48, 49, 50)">
             {{$slot}}
-            <x-footer />
+            <x-footer/>
         </div>
     </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>

@@ -2,8 +2,8 @@
     
     
     <main> 
-    <div class="container-fluid px-4 pt-4">
-        {{-- <h1 class="mt-4">Tables</h1> --}}
+    <div class="container-fluid px-4 pt-2">
+        <h1 class="mt-4 text-white">Subjects</h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Dashboard</a></li>
             <li class="breadcrumb-item active">Subjects</li>
@@ -15,11 +15,7 @@
                 
             </div>
         </div> --}}
-        <div class="card mb-4">
-            <div class="card-header">
-                <i class="fas fa-table me-1"></i>
-                DataTable Example
-            </div>
+        <div class="card mb-2 border-white" style="background-color: rgb(48, 49, 50)">
             <div class="card-body">
                 <table id="datatablesSimple" class="table table-dark table-hover">
                     <thead>
@@ -60,6 +56,7 @@
                     </tbody>
                   
                 </table>
+                {{$subjects -> links()}}
                 
             </div>
         </div>

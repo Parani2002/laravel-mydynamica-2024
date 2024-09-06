@@ -1,7 +1,7 @@
 <x-layout>
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Dashboard</h1>
+        <h1 class="mt-4 text-white">Dashboard</h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item active">Dashboard</li>
         </ol>
@@ -14,7 +14,7 @@
                         <div class="card-body"><h3 class="text-center">{{$student_count}}</h3></div>
                     </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <a class="small text-white stretched-link" href="{{url('students')}}">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                         <div class="card-body"><h3 class="text-center">{{$grade_count}}</h3></div>
                     </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <a class="small text-white stretched-link" href="{{url('grades')}}">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                         <div class="card-body"><h3 class="text-center">{{$subject_count}}</h3></div>
                     </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <a class="small text-white stretched-link" href="{{url('subjects')}}">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <div class="card-body"><h3 class="text-center">100</h3></div>
                     </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <a class="small text-white stretched-link" href="{{url("teachers")}}">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
