@@ -5,6 +5,9 @@
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Dashboard</a></li>
                 <li class="breadcrumb-item active">Students</li>
+                <button>
+                    <a href="/students/create">Add</a>
+                </button>
             </ol>
             <div class="card mb-2 " style="background-color:rgb(48, 49, 50)">
                 <div class="card-header">
@@ -20,6 +23,8 @@
                                 <th>Last Name</th>
                                 <th>Grade Name</th>
                                 <th>Show</th>
+                                <th>Remove</th>
+                                <th>Edit</th>
                              
                             </tr>
                         </thead>
@@ -30,6 +35,8 @@
                                 <th>Last Name</th>
                                 <th>Grade Name</th>
                                 <th>Show</th>
+                                <th>Remove</th>
+                                <th>Edit</th>
                           
                             </tr>
                         </tfoot>
@@ -40,8 +47,15 @@
                                 <td>{{$student -> first_name}}</td>
                                 <td>{{$student -> last_name}}</td>
                                 <td>{{$student -> grade -> grade_name}}</td>
-                                
                                 <td><a href="{{url('students/'. $student -> id)}}" type="button" class="btn btn-primary px-4 py-2 align-middle">VIEW</a></td>
+                                <td>
+                                    <form action="/students/{{$student -> id}}" method="post">
+                                        @method('delete')
+                                        @csrf
+                                        <input type="submit" value="REMOVE" class="btn btn-danger px-4 py-2 align-middle" onclick="return confirm('Do you want to delete')">
+                                    </form>
+                                </td>
+                                <td><a href="{{url('students/'. $student -> id . '/edit')}}" type="button" class="btn btn-secondary px-4 py-2 justify-content-center">EDIT</a></td>
                             </tr>     
                             @endforeach
                         </tbody>
