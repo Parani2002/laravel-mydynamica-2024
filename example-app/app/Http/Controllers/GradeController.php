@@ -22,7 +22,7 @@ class GradeController extends Controller
      */
     public function create()
     {
-        //
+        return view('grade.create');
     }
 
     /**
@@ -30,7 +30,12 @@ class GradeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $grade = new Grade();
+        $grade -> grade_name = $request -> input('grade_name');
+        $grade -> grade_group = $request -> input('grade_group');
+        $grade -> grade_order = $request -> input('grade_order');
+        $grade -> grade_color = $request -> input('grade_color');
+        $grade -> save();
     }
 
     /**
@@ -47,7 +52,8 @@ class GradeController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $grade = Grade::find($id);
+        return view('grade.edit',compact('grade'));
     }
 
     /**
@@ -55,7 +61,12 @@ class GradeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $grade = new Grade();
+        $grade -> grade_name = $request -> input('grade_name');
+        $grade -> grade_group = $request -> input('grade_group');
+        $grade -> grade_order = $request -> input('grade_order');
+        $grade -> grade_color = $request -> input('grade_color');
+        $grade -> save();
     }
 
     /**
@@ -63,6 +74,8 @@ class GradeController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $grade = grade::find($id);
+        $grade -> delete();
+        return redirect('grades');
     }
 }
