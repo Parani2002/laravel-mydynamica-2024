@@ -13,7 +13,7 @@ class GradeController extends Controller
      */
     public function index()
     {
-        $grades = Grade::all();
+        $grades = Grade::paginate(10);
         return view('grade.index',compact('grades'));
     }
 
@@ -36,6 +36,7 @@ class GradeController extends Controller
         $grade -> grade_order = $request -> input('grade_order');
         $grade -> grade_color = $request -> input('grade_color');
         $grade -> save();
+        return redirect('grades');
     }
 
     /**

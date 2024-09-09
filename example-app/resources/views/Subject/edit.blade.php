@@ -7,7 +7,7 @@
 
             
             <label for="subject_name">Subject Name</label><br>
-            <input type="text" id="subject_name" name="subject_name" value="{{$subject -> subject_name}}">
+            <input type="text" name="subject_name" id="subject_name" value="{{$subject -> subject_name}}">
             <br>
         
         

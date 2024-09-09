@@ -17,7 +17,7 @@
         </div> --}}
         <div class="card mb-2 border-white" style="background-color: rgb(48, 49, 50)">
             <div class="card-body">
-                <table id="datatablesSimple" class="table table-dark table-hover">
+                <table id="datatablesSimple" class="table table-dark table-hover text-center ">
                     <thead>
                         <tr>
                             <th>Subject ID</th>
@@ -25,6 +25,8 @@
                             <th>Subject Order</th>
                             <th>Subject Colour</th>
                             <th>Show</th>
+                            <th>Remove</th>
+                            <th>Edit</th>
                          
                         </tr>
                     </thead>
@@ -35,6 +37,8 @@
                             <th>Subject Order</th>
                             <th>Subject Colour</th>
                             <th>Show</th>
+                            <th>Remove</th>
+                            <th>Edit</th>
                       
                         </tr>
                     </tfoot>

@@ -19,7 +19,10 @@
                                 <th>Grade Name</th>
                                 <th>Grade Group</th>
                                 <th>Grade Order</th>
+                                <th>Grdae Color</th>
                                 <th>Show</th>
+                                <th>Remove</th>
+                                <th>Edit</th>
                              
                             </tr>
                         </thead>
@@ -29,7 +32,10 @@
                                 <th>Grade Name</th>
                                 <th>Grade Group</th>
                                 <th>Grade Order</th>
+                                <th>Grade Color</th>
                                 <th>Show</th>
+                                <th>Remove</th>
+                                <th>Edit</th>
                           
                             </tr>
                         </tfoot>
@@ -40,8 +46,16 @@
                                 <td>{{$grade -> grade_name}}</td>
                                 <td>{{$grade -> grade_group}}</td>
                                 <td>{{$grade -> grade_order}}</td>
+                                <td>{{$grade -> grade_color}}</td>
                                 <td><a href="{{url('grades/'. $grade -> id)}}" type="button" class="btn btn-primary px-4 py-2 align-middle">Show</a></td>
-                                
+                                <td>
+                                    <form action="/grades/{{$grade -> id}}" method="post">
+                                        @method('delete')
+                                        @csrf
+                                        <input type="submit" value="REMOVE" class="btn btn-danger px-4 py-2 align-middle" onclick="return confirm('Do you want to delete')">
+                                    </form>
+                                </td>
+                                <td><a href="{{url('grades/'. $grade -> id . '/edit')}}" type="button" class="btn btn-secondary px-4 py-2 justify-content-center">EDIT</a></td>
                               
                             </tr>
                                 
@@ -49,6 +63,7 @@
                         </tbody>
                       
                     </table>
+                    {{$grades -> links()}}
                     
                 </div>
             </div>

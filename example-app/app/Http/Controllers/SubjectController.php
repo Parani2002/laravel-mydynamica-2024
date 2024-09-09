@@ -53,7 +53,8 @@ class SubjectController extends Controller
     public function edit(string $id)
     {
         $subject = Subject::find($id);
-        return view('subject.edit',compact('subject'));
+        $subjects = Subject::pluck('subject_name','id');
+        return view('subject.edit',compact('subject','subjects'));
     }
 
     /**
@@ -66,6 +67,7 @@ class SubjectController extends Controller
         $subject -> subject_order = $request -> input('subject_order');
         $subject -> color = $request -> input('color');
         $subject -> save();
+        return redirect('subjects');
     }
 
     /**
