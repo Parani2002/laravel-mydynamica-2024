@@ -16,7 +16,7 @@
             <br>
     
             <label for="color">Subject Color</label><br>
-            <input type="text" name="color" id="color" value="{{$subject -> color}}"><br><br>
+            <input type="color" name="color" id="color" value="{{$subject -> color}}"><br><br>
         
             <input type="submit" value="submit">
             </form>

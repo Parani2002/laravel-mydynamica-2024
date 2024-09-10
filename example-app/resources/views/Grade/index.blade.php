@@ -46,7 +46,7 @@
                                 <td>{{$grade -> grade_name}}</td>
                                 <td>{{$grade -> grade_group}}</td>
                                 <td>{{$grade -> grade_order}}</td>
-                                <td>{{$grade -> grade_color}}</td>
+                                <td style="background: {{$grade -> grade_color}};"></td>
                                 <td><a href="{{url('grades/'. $grade -> id)}}" type="button" class="btn btn-primary px-4 py-2 align-middle">Show</a></td>
                                 <td>
                                     <form action="/grades/{{$grade -> id}}" method="post">
