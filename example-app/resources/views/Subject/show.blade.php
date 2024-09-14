@@ -1,13 +1,13 @@
 <x-layout>
     <main>
         <div class="container-fluid px-4 pt-2">
-            <h1 class="mt-4 text-white">Grade Details</h1>
+            <h1 class="mt-4 text-white">Subject Details</h1>
 
     
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Dashboard</a></li>
-        <li class="breadcrumb-item active"><a href="/grades" class="text-decoration-none">Grades</a></li>
-        <li class="breadcrumb-item active">{{$grade -> grade_name}}</li>
+        <li class="breadcrumb-item active"><a href="/grades" class="text-decoration-none">Subjects</a></li>
+        <li class="breadcrumb-item active">{{$subject -> subject_name}}</li>
 
     </ol>
    
@@ -19,10 +19,10 @@
                     <strong>Students</strong>
                 </div>
                 <div class="card-body" >
-                    @if($grade -> students -> isEmpty())
+                    @if($subject -> students -> isEmpty())
                     <h3 style="text-align: center">No Data!</h3>
                     @endif
-                        @foreach ($grade -> students as $student)
+                        @foreach ($subject -> students as $student)
                         <div class="card mb-4" style="height:60px;margin-right: 10px10px;box-shadow: 1px 1px 20px #111111 ;border-radius: 20px;background-color:white">
                             <a href="/students/{{$student->id}}" class="student-list" style="text-decoration: none;">
                                 <div class="card-body" style="padding: 4px 4px 4px 8px;">
@@ -47,17 +47,17 @@
             <div class="card mb-4 rounded-4" style="background-color:#374259;box-shadow: 1px 1px 20px #111111">
                 <div class="card-header text-white">
                     <i class="fas fa-book-open me-2"></i>
-                    <strong>Subject Information</strong>
+                    <strong>Grade Information</strong>
                 </div>
                 <div class="card-body">
-                    @if ($grade -> subjects -> isEmpty())
+                    @if ($subject -> grades -> isEmpty())
                         <h3 class="text-center">No Data!</h3>
                     @else
-                        @foreach ($grade -> subjects as $subject)
+                        @foreach ($subject -> grades as $grade)
                         <div style="margin-right: 10px;margin-bottom:10px; box-shadow:1px 1px 20px #111111; border-radius:20px">
-                            <a href="{{url('subjects/' . $subject -> id)}}" class="student-list text-decoration-none list-unstyled">
+                            <a href="{{url('grades/' . $grade -> id)}}" class="student-list text-decoration-none list-unstyled">
                                 <div class="card-body">
-                                    <li class="list group-item ">{{$subject -> subject_name}}</li>
+                                    <li class="list group-item ">{{$grade -> grade_name}}</li>
                                 </div>
                             </a>
                         </div>
