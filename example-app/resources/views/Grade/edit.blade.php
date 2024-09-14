@@ -19,7 +19,7 @@
 
             <label for="grade_color">Grade Color</label><br>
             <input type="color" id="grade_color" name="grade_color" value="{{$grade -> grade_color}}">
-            <br>
+            <br><br>
 
             <input type="submit" value="submit">
             </form>
